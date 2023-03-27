@@ -1,0 +1,8 @@
+from django.apps import AppConfig
+
+
+class CalorieappConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'calorieapp'
+    def ready(self): #new
+        import calorieapp.signals #new
